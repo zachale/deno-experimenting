@@ -1,0 +1,31 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@std/assert@1": "1.0.7",
+    "jsr:@std/internal@^1.0.5": "1.0.5",
+    "npm:@comfyorg/litegraph@~0.8.20": "0.8.20",
+    "npm:create-vite@latest": "5.5.5"
+  },
+  "jsr": {
+    "@std/assert@1.0.7": {
+      "integrity": "64ce9fac879e0b9f3042a89b3c3f8ccfc9c984391af19e2087513a79d73e28c3",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.5": {
+      "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
+    }
+  },
+  "npm": {
+    "@comfyorg/litegraph@0.8.20": {
+      "integrity": "sha512-dZWeYuS0widTO+iRDV8DCIG4SS0N8FjehQCquKJUkAi8yaNe8hzvAHV1C8b2gid72dM59Xa11KMqo1cIkw6FQQ=="
+    },
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@1",
+      "npm:@comfyorg/litegraph@~0.8.20"
+    ]
+  }
+}
