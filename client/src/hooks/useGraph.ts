@@ -1,8 +1,14 @@
 import { useEffect } from "react";
 import { createGraph } from "../editor.ts";
 import { resgisterCustomNodes } from "../nodes/register.ts";
-export function useGraph(canvas: React.RefObject<HTMLCanvasElement>) {
+export function useGraph(canvasRef: React.RefObject<HTMLCanvasElement>) {
   useEffect(() => {
-    canvas.current && resgisterCustomNodes() && createGraph(canvas.current);
-  }, [canvas]);
+    if (canvasRef.current) {
+      resgisterCustomNodes();
+      const { graph } = createGraph(canvasRef.current);
+      return () => {
+        graph.stop();
+      };
+    }
+  }, [canvasRef]);
 }
