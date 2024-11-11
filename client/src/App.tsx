@@ -5,11 +5,22 @@ import { useGraph } from "./hooks/useGraph.ts";
 
 export default function App() {
   const canvas = useRef<HTMLCanvasElement>(null);
+  const app = useRef<HTMLDivElement>(null);
   useGraph(canvas);
 
   return (
-    <div className="App">
-      <canvas ref={canvas} id="mycanvas" width="1024" height="720"></canvas>
+    <div
+      ref={app}
+      className="App"
+      style={{ width: "100svw", height: "100svh" }}
+    >
+      <canvas
+        ref={canvas}
+        id="mycanvas"
+        width={String(window.innerWidth) + "px"}
+        height={String(window.innerHeight) + "px"}
+      >
+      </canvas>
     </div>
   );
 }

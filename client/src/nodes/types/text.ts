@@ -1,5 +1,4 @@
 import { LGraphNode } from "@comfyorg/litegraph";
-import { ensureAbsolutePath } from "../../../../../../../AppData/Local/deno/npm/registry.npmjs.org/@typescript-eslint/typescript-estree/8.13.0/dist/create-program/shared.d.ts";
 
 export class Text extends LGraphNode {
   value: string = "";

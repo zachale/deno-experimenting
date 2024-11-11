@@ -1,15 +1,15 @@
 import { LGraphNode } from "@comfyorg/litegraph";
 
-export class Number extends LGraphNode {
-  value: number = 0;
+export class String extends LGraphNode {
+  value: string = "";
   constructor() {
-    super("Number");
-    this.addWidget("number", "value", 1, (value) => {
+    super("String");
+    this.addWidget("string", "value", 1, (value) => {
       if (value) {
         this.value = value;
       }
     });
-    this.addOutput("value", "number");
+    this.addOutput("value", "string");
     this.properties = { precision: 1 };
   }
 
