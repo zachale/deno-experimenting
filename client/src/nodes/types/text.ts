@@ -25,10 +25,10 @@ export class Text extends LGraphNode {
         "Content-type": "application/json; charset=UTF-8",
       },
     }).then((response) => response.json())
-      .then(({ response }) => {
+      .then((response) => {
         this.title = response.title;
         console.log(response.script);
-        const test = eval(`() => {${response.script}}`); // converts arrow function as a string to javascript
+        const test = () => eval(`(${response.script}).call(this)`); // converts recieved function into arrow function
         console.log(test);
         this.onExecute = test;
         response.inputs.forEach((input: { label: string; type: string }) => {
