@@ -37,6 +37,7 @@ export async function scriptBuilder(
       - Inputs: ${JSON.stringify(context.inputs)}
       - Outputs: ${JSON.stringify(context.outputs)}.
     The function must have no arguments.
+    Ensure complete error handling. Do not assume the inputs are valid.
     Use the following function calls to manipulate the inputs and outputs:
       - this.getInputDataByName(label: string) // returns the data from the input at the given index
       - this.setOutputData(index:number, data: number | string) // sets the data for the output at the given
