@@ -9,6 +9,6 @@
 
 ### Demos
 
-![til](./demos/demo-1.gif)
+![demo gif](./demos/demo-1.gif)
 
 ![image](https://github.com/user-attachments/assets/8eeab09e-74d3-473d-88f3-d34820807aca)
