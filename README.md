@@ -2,10 +2,16 @@
 
 - A visual programming tool with nodes that can be generated using LLMs
 
+### Why did I make this?
+
+- To explore the viability of abstracting programming languages behind a generative layer
+- To determine if current LLMs can reliably generate snippets of code with little to no human intervention
+
 ### Tech
 
-- LiteGraph -> super light, [vanilla javascript functional node library ](https://github.com/jagenjo/litegraph.js/)
-- Deno -> lightning-fast, rust-based, javascript runtime environment
+- [Ollama](https://ollama.com/) -> plug and play local LLM prompting tool
+- [LiteGraph](https://github.com/jagenjo/litegraph.js/) -> super light, vanilla javascript functional node library
+- [Deno](https://deno.com/) -> lightning-fast, rust-based, JavaScript runtime environment
 
 ### Demos
 
